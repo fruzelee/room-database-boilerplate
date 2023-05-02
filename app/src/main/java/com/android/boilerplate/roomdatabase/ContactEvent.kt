@@ -2,8 +2,8 @@ package com.android.boilerplate.roomdatabase
 
 sealed interface ContactEvent {
     object SaveContact : ContactEvent
-    data class SetFristName(val firstName: String) : ContactEvent
-    data class SetSecondName(val secondName: String) : ContactEvent
+    data class SetFirstName(val firstName: String) : ContactEvent
+    data class SetLastName(val lastName: String) : ContactEvent
     data class SetPhoneNumber(val phoneNumber: String) : ContactEvent
     object ShowDialog : ContactEvent
     object HideDialog : ContactEvent
