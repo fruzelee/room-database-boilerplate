@@ -21,3 +21,4 @@ step 3: create database
   radio button, show or hide the dialog etc.
 - feat(viewModel): add view model to map our states and events
 - feat(ui): create contact screen
+- feat(ui): create contact dialog
