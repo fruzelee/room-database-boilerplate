@@ -17,3 +17,5 @@ step 2: create DAO
 step 3: create database
 
 - feat: add various event
+- feat: create state class that combines the screen state including contact list, selected radio
+  button, show or hide the dialog etc. 
