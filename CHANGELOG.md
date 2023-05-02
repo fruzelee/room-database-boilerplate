@@ -20,3 +20,4 @@ step 3: create database
 - feat(state): create state class that combines the screen state including contact list, selected
   radio button, show or hide the dialog etc.
 - feat(viewModel): add view model to map our states and events
+- feat(ui): create contact screen
