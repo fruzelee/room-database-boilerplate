@@ -7,6 +7,7 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.rememberScrollState
@@ -31,16 +32,19 @@ import androidx.compose.ui.unit.sp
 fun ContactScreen(
     state: ContactState, onEvent: (ContactEvent) -> Unit
 ) {
-    Scaffold(floatingActionButton = {
-        FloatingActionButton(onClick = {
-            onEvent(ContactEvent.ShowDialog)
-        }) {
-            Icon(
-                imageVector = Icons.Default.Add,
-                contentDescription = "Add contact"
-            )
-        }
-    }) { padding ->
+    Scaffold(
+        floatingActionButton = {
+            FloatingActionButton(onClick = {
+                onEvent(ContactEvent.ShowDialog)
+            }) {
+                Icon(
+                    imageVector = Icons.Default.Add,
+                    contentDescription = "Add contact"
+                )
+            }
+        },
+        modifier = Modifier.padding(16.dp)
+    ) { padding ->
         if (state.isAddingContact) {
             AddContactDialog(state = state, onEvent = onEvent)
         }
