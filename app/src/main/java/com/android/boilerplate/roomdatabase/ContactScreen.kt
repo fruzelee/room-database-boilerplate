@@ -4,6 +4,7 @@ import androidx.compose.foundation.clickable
 import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -44,13 +45,13 @@ fun ContactScreen(
             }
         },
         modifier = Modifier.padding(16.dp)
-    ) { padding ->
+    ) { _ ->
         if (state.isAddingContact) {
             AddContactDialog(state = state, onEvent = onEvent)
         }
 
         LazyColumn(
-            contentPadding = padding,
+            contentPadding = PaddingValues(16.dp),
             modifier = Modifier.fillMaxSize(),
             verticalArrangement = Arrangement.spacedBy(16.dp)
         ) {

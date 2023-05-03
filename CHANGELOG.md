@@ -25,4 +25,5 @@ step 3: create database
 - feat(ui): implement addContactDialog on the ContactScreen
 - feat: call `ContactScreen` on the `MainActivity`
 - feat(ui): add padding to the `ContactScreen`
+- feat(ui): add `PaddingValues` to the `LazyColumn` on `ContactScreen`
 
